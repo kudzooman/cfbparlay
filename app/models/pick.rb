@@ -1,4 +1,4 @@
 class Pick < ActiveRecord::Base
-  belongs_to :card
-  belongs_to :user
+  has_many :cards, dependent: :destroy
+  has_many :users, through: :cards, dependent: :destroy
 end

@@ -1,3 +1,4 @@
 class Card < ActiveRecord::Base
-  has_many :picks
+  belongs_to :user
+  belongs_to :pick
 end
