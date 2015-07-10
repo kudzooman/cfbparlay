@@ -1,2 +1,90 @@
-<h1>Cards#new</h1>
-<p>Find me in app/views/cards/new.html.erb</p>
+<h1>New Card</h1>
+ 
+ <div class="row">
+   <div class="col-md-4">
+     <p>Payouts</p>
+     <ul>
+       <li>3 picks pays 6/1</li>
+       <li>4 picks pays 10/1</li>
+       <li>5 picks pays 20/1</li>
+       <li>6 picks pays 40/1</li>
+       <li>7 picks pays 80/1</li>
+       <li>8 picks pays 100/1</li>
+       <li>9 picks pays 150/1</li>
+       <li>10 picks pays 300/1</li>
+     </ul>
+   </div>
+   <div class="col-md-8">
+     <%= form_for @card do |f| %>
+       <div class="form-group">
+         <%= f.label :date %>
+         <%= f.text_field :title, class: 'form-control', placeholder: "Enter date of bet." %>
+       </div>
+
+       <div class="form-group">
+         <%= f.label :bet %>
+         <%= f.text_field :title, class: 'form-control', placeholder: "Enter bet total." %>
+       </div>
+
+<div class="table table-striped table-bordered table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Favorite</th>
+        <th>Point Spread</th>
+        <th>Underdog</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= f.submit "Georgia", class: 'btn btn-danger' %></td>
+        <td>17</td>
+        <td><%= f.submit "Florida", class: 'btn btn-danger' %></td>
+      </tr>
+
+      <tr>
+        <td><%= f.submit "Vandy", class: 'btn btn-danger' %></td>
+        <td>3</td>
+        <td><%= f.submit "Bama", class: 'btn btn-danger' %></td>
+      </tr>
+
+      <tr>
+        <td><%= f.submit "Mizzou", class: 'btn btn-danger' %></td>
+        <td>13</td>
+        <td><%= f.submit "Auburn", class: 'btn btn-danger' %></td>
+      </tr>
+
+      <tr>
+        <td><%= f.submit "Miss St", class: 'btn btn-danger' %></td>
+        <td>30</td>
+        <td><%= f.submit "Arky", class: 'btn btn-danger' %></td>
+      </tr>
+
+      <tr>
+        <td><%= f.submit "Tennessee", class: 'btn btn-danger' %></td>
+        <td>10</td>
+        <td><%= f.submit "SoCar", class: 'btn btn-danger' %></td>
+      </tr>
+
+      <tr>
+        <td><%= f.submit "Ole Miss", class: 'btn btn-danger' %></td>
+        <td>3</td>
+        <td><%= f.submit "LSU", class: 'btn btn-danger' %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+       <!-- <div class="form-group"> -->
+         <%#= f.label :body %>
+         <%#= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter post body" %>
+       <!-- </div> -->
+
+
+       <div class="form-group">
+         <%= f.submit "Save", class: 'btn btn-success' %>
+       </div>
+     <% end %>
+   </div>
+ </div>
